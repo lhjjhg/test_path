@@ -1,0 +1,1117 @@
+/* 예매 페이지 스타일 - 다크 테마 */
+.booking-section {
+  padding: 20px 0;
+  background-color: #121212;
+  min-height: calc(100vh - 200px);
+  color: #e0e0e0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.booking-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #333333;
+}
+
+.booking-column {
+  flex: 1;
+  min-width: 250px;
+  border-right: 1px solid #333333;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+}
+
+.booking-column:last-child {
+  border-right: none;
+}
+
+.column-header {
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.column-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #e0e0e0;
+}
+
+.column-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+}
+
+/* 스크롤바 스타일 */
+.column-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.column-content::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.column-content::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.column-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 영화 목록 스타일 */
+.movie-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.movie-item {
+  padding: 12px 15px;
+  border-bottom: 1px solid #333333;
+  cursor: pointer;
+  color: #ccc;
+  transition: all 0.2s ease;
+}
+
+.movie-item:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.movie-item.selected {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+}
+
+.movie-item.selected::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #3498db;
+  border-radius: 50%;
+}
+
+/* 극장 목록 스타일 */
+.region-tabs {
+  background-color: #000000;
+  border-bottom: 1px solid #333333;
+  padding: 10px 0;
+}
+
+.region-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
+  gap: 5px;
+}
+
+.region-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.region-item:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.region-item.selected {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 극장 목록 스타일 */
+.theater-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.theater-item {
+  padding: 12px 15px;
+  border-bottom: 1px solid #333333;
+  cursor: pointer;
+  color: #ccc;
+  transition: all 0.2s ease;
+}
+
+.theater-item:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.theater-item.selected {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+}
+
+.theater-item.selected::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #3498db;
+  border-radius: 50%;
+}
+
+/* 날짜 목록 스타일 */
+.date-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.date-item {
+  width: calc(100% / 7);
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #333333;
+  border-right: 1px solid #333333;
+  color: #ccc;
+  transition: all 0.2s ease;
+}
+
+.date-item:nth-child(7n) {
+  border-right: none;
+}
+
+.date-item:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.date-item.selected {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.date-day {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.date-day.saturday {
+  color: #3498db;
+}
+
+.date-day.sunday {
+  color: #e74c3c;
+}
+
+.date-item.selected .date-day {
+  color: inherit;
+}
+
+.date-num {
+  font-size: 16px;
+}
+
+/* 시간 목록 스타일 */
+.time-list-container {
+  padding: 15px;
+  height: 100%;
+}
+
+.no-schedule-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+.no-schedule-message i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.loading-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: #888;
+  text-align: center;
+}
+
+.loading-message i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  padding: 20px;
+}
+
+.no-screenings {
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+.screen-group {
+  margin-bottom: 20px;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  padding: 15px;
+  border: 1px solid #333333;
+}
+
+.screen-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #333333;
+}
+
+.time-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.time-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #3a3a3a;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  color: #e0e0e0;
+  min-width: 80px;
+}
+
+.time-button:hover {
+  background-color: #333;
+  color: white;
+  border-color: #3498db;
+}
+
+.time-button.selected {
+  background-color: #0d47a1;
+  color: white;
+  border-color: #1e88e5;
+}
+
+.time-info {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.seat-info {
+  font-size: 12px;
+  opacity: 0.8;
+  color: #888;
+  margin-top: 5px;
+}
+
+.time-button.few-seats .seat-info {
+  color: #e74c3c;
+}
+
+.time-button.sold-out {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.time-button.sold-out .seat-info {
+  color: #e74c3c;
+}
+
+/* 좌석 선택 페이지 스타일 */
+.seat-selection-section {
+  padding: 40px 0;
+  background-color: #121212;
+  min-height: calc(100vh - 200px);
+  color: #e0e0e0;
+}
+
+.seat-selection-container {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #333333;
+}
+
+.movie-info-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background-color: #000000;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.movie-info h2 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  opacity: 0.9;
+}
+
+.movie-info h3 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.ticket-selection {
+  display: flex;
+  gap: 30px;
+}
+
+.ticket-type {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.ticket-type label {
+  font-size: 16px;
+  font-weight: 600;
+  width: 60px;
+}
+
+.ticket-count-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.count-btn {
+  width: 35px;
+  height: 35px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.count-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.count {
+  font-size: 20px;
+  font-weight: 700;
+  width: 40px;
+  text-align: center;
+}
+
+.seat-layout {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333333;
+}
+
+.screen {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 40px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.seats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #444444;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #2a2a2a;
+  transition: all 0.2s ease;
+  color: #e0e0e0;
+}
+
+.seat:hover:not(.booked) {
+  background-color: #0d47a1;
+  color: white;
+  border-color: #1e88e5;
+}
+
+.seat.selected {
+  background-color: #0d47a1;
+  color: white;
+  border-color: #1e88e5;
+}
+
+.seat.booked {
+  background-color: #424242;
+  color: #757575;
+  border-color: #616161;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.seat.booked::after {
+  content: "×";
+  position: absolute;
+  font-size: 24px;
+  color: #ef5350;
+  font-weight: bold;
+}
+
+.seat-legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  border: 1px solid #333333;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.seat-sample {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid;
+}
+
+.seat-sample.available {
+  background-color: #2a2a2a;
+  border-color: #444444;
+}
+
+.seat-sample.selected {
+  background-color: #0d47a1;
+  border-color: #1e88e5;
+}
+
+.seat-sample.booked {
+  background-color: #424242;
+  border-color: #616161;
+  position: relative;
+}
+
+.seat-sample.booked::after {
+  content: "×";
+  position: absolute;
+  font-size: 16px;
+  color: #ef5350;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.booking-summary {
+  background-color: #000000;
+  color: white;
+  border-radius: 8px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.back-btn,
+.booking-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: none;
+}
+
+.back-btn {
+  background-color: #424242;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #616161;
+}
+
+.booking-btn {
+  background-color: #1e88e5;
+  color: white;
+}
+
+.booking-btn:hover {
+  background-color: #1976d2;
+}
+
+.booking-btn:disabled {
+  background-color: #616161;
+  cursor: not-allowed;
+}
+
+/* 예매 완료 페이지 스타일 */
+.booking-complete-section {
+  padding: 40px 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.booking-complete-container {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #333333;
+}
+
+.complete-message {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.complete-message i {
+  font-size: 60px;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.complete-message h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.booking-details {
+  margin-bottom: 40px;
+}
+
+.booking-details h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333333;
+  color: #ffffff;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.details-table th,
+.details-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #333333;
+}
+
+.details-table th {
+  width: 30%;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2a2a2a;
+}
+
+.details-table td {
+  color: #e0e0e0;
+}
+
+.booking-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-btn,
+.my-bookings-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.home-btn {
+  background-color: #424242;
+  color: white;
+}
+
+.home-btn:hover {
+  background-color: #616161;
+}
+
+.my-bookings-btn {
+  background-color: #1e88e5;
+  color: white;
+}
+
+.my-bookings-btn:hover {
+  background-color: #1976d2;
+}
+
+/* 나의 예매내역 페이지 스타일 */
+.my-bookings-section {
+  padding: 40px 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.login-required {
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333333;
+}
+
+.login-required i {
+  font-size: 60px;
+  color: #ffc107;
+  margin-bottom: 20px;
+}
+
+.login-required h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.login-required p {
+  margin-bottom: 25px;
+  color: #9e9e9e;
+}
+
+.login-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1e88e5;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #1976d2;
+}
+
+.booking-item {
+  display: flex;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  border: 1px solid #333333;
+}
+
+.booking-item.past {
+  opacity: 0.7;
+}
+
+.booking-poster {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.booking-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.booking-info {
+  flex: 1;
+  padding: 25px;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.movie-title {
+  font-size: 20px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.booking-status {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.booking-status.future {
+  background-color: #0d47a1;
+  color: white;
+}
+
+.booking-status.past {
+  background-color: #424242;
+  color: #e0e0e0;
+}
+
+.booking-details {
+  margin-bottom: 20px;
+}
+
+.booking-details p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.detail-btn,
+.cancel-btn,
+.review-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.detail-btn {
+  background-color: #424242;
+  color: white;
+}
+
+.detail-btn:hover {
+  background-color: #616161;
+}
+
+.cancel-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+.review-btn {
+  background-color: #43a047;
+  color: white;
+}
+
+.review-btn:hover {
+  background-color: #388e3c;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333333;
+}
+
+.no-bookings i {
+  font-size: 60px;
+  color: #1e88e5;
+  margin-bottom: 20px;
+}
+
+.no-bookings h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.no-bookings p {
+  margin-bottom: 25px;
+  color: #9e9e9e;
+}
+
+.booking-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1e88e5;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.booking-btn:hover {
+  background-color: #1976d2;
+}
+
+.error-container {
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333333;
+}
+
+.error-container i {
+  font-size: 60px;
+  color: #e53935;
+  margin-bottom: 20px;
+}
+
+.error-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.error-container p {
+  margin-bottom: 25px;
+  color: #9e9e9e;
+}
+
+.return-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1e88e5;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.return-btn:hover {
+  background-color: #1976d2;
+}
+
+/* 에러 및 로딩 메시지 스타일 */
+.error-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: #ef5350;
+  font-weight: 500;
+  background-color: rgba(244, 67, 54, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.no-screenings {
+  text-align: center;
+  padding: 40px 20px;
+  color: #9e9e9e;
+  font-weight: 500;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  border: 1px solid #333333;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1200px) {
+  .booking-column {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .booking-container {
+    flex-direction: column;
+    margin: 0 20px;
+  }
+
+  .booking-column {
+    border-right: none;
+    border-bottom: 1px solid #333333;
+    min-height: auto;
+    max-height: 400px;
+  }
+
+  .booking-column:last-child {
+    border-bottom: none;
+  }
+
+  .movie-info-panel {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ticket-selection {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .date-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .date-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .seat {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .booking-summary {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .time-buttons {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .booking-container {
+    margin: 0 10px;
+  }
+
+  .date-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ticket-selection {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .seat {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+
+  .seat-legend {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
